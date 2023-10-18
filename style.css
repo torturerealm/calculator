@@ -30,5 +30,8 @@ body {
 }
 
 button {
+    height: 30px;
+    font-size: medium;
+    border-radius: 8px;
     flex: 1;
 }
