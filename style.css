@@ -26,6 +26,7 @@ body {
 
 .rows {
     display: flex;
+    gap: 8px;
 }
 
 button {
