@@ -35,3 +35,7 @@ button {
     border-radius: 8px;
     flex: 1;
 }
+
+.operator {
+    background-color: orange;
+}
