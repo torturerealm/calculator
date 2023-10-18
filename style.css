@@ -17,3 +17,9 @@ body {
     width: 300px;
     background-color: gray;
 }
+
+.num-pad {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
