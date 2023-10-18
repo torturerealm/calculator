@@ -24,7 +24,7 @@ body {
     gap: 8px;
 }
 
-.first-row {
+.rows {
     display: flex;
 }
 
