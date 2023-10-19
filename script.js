@@ -31,7 +31,17 @@ function operate(a, b, operator) {
     };
 }
 
+function displayNumbers() {
+    const screen = document.querySelector(".display");
+    const text = document.createElement("div");
+    text.textContent = "Hi";
+    screen.appendChild(text);
+}
+
+
 const buttons = document.querySelectorAll("button");
 buttons.forEach(button => button.addEventListener("click", () => {
-    console.log("It's working");
+    // function to store clicked numbers in variable
+    displayNumbers();
+    // function to change display
 }));
