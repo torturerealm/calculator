@@ -31,5 +31,7 @@ function operate(a, b, operator) {
     };
 }
 
-operate(numberOne, numberTwo, operator);
-console.log(equals);
+const button = document.querySelector("button");
+button.addEventListener("click", () => {
+    console.log("It's working");
+});
