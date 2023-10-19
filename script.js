@@ -31,10 +31,10 @@ function operate(a, b, operator) {
     };
 }
 
-function displayNumbers() {
+function displayNumbers(e) {
     const screen = document.querySelector(".display");
     const text = document.createElement("div");
-    text.textContent = "Hi";
+    text.textContent = e;
     screen.appendChild(text);
 }
 
@@ -42,6 +42,6 @@ function displayNumbers() {
 const buttons = document.querySelectorAll("button");
 buttons.forEach(button => button.addEventListener("click", () => {
     // function to store clicked numbers in variable
-    displayNumbers();
+    displayNumbers(button.textContent);
     // function to change display
 }));
