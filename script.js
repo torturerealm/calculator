@@ -32,6 +32,6 @@ function operate(a, b, operator) {
 }
 
 const buttons = document.querySelectorAll("button");
-buttons.addEventListener("click", () => {
+buttons.forEach(button => button.addEventListener("click", () => {
     console.log("It's working");
-});
+}));
