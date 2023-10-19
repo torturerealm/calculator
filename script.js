@@ -31,7 +31,7 @@ function operate(a, b, operator) {
     };
 }
 
-const button = document.querySelector("button");
+const button = document.querySelectorAll("button");
 button.addEventListener("click", () => {
     console.log("It's working");
 });
