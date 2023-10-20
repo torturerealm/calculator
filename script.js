@@ -20,15 +20,14 @@ function divide(a, b) {
 }
 
 function operate(a, b, operator) {
-        
     if (operator === "+") {
-        add(a, b);
+       return add(a, b);
     } else if (operator === "-") {
-        subtract(a, b);
+        return subtract(a, b);
     } else if (operator === "*") {
-        multiply(a, b);
+        return multiply(a, b);
     } else if (operator === "/") {
-        divide(a, b);
+        return divide(a, b);
     };
 }
 
@@ -65,7 +64,8 @@ buttons.forEach(button => button.addEventListener("click", () => {
     // function to operate numberOne and numberTwo
     updateOperator(button);
     if (button.className == "equals") {
-        operate(numberOne, numberTwo, operator);
+        let d = operate(numberOne, numberTwo, operator);
+        console.log(d);
     }
 
     if (operator == "") {
