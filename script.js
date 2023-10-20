@@ -43,20 +43,26 @@ function storeValue(e) {
 }
 
 function updateOperator(e) {
-    operator = e;
+    if (e.className == "operator") {
+        operator = e;
+    }
 }
 
 
 const buttons = document.querySelectorAll("button");
 buttons.forEach(button => button.addEventListener("click", () => {
-    // displayNumbers(button.textContent);
-    // storeValue(button.textContent);
-    // displayNumbers(numberOne);
-
-    if (button.className == "operator") updateOperator(button.textContent);
-    else if (operator == "") {
+    
+    updateOperator(button);
+    
+    if (operator == "") {
+        // update numberOne
+        // display numberOne
         storeValue(button.textContent);
         displayNumbers(numberOne);
+    } else {
+        // display operator
+        // update numberTwo
+        // display numberTwo
     }
 
 }));
