@@ -42,9 +42,21 @@ function storeValue(e) {
     numberOne += e; 
 }
 
+function updateOperator(e) {
+    operator = e;
+}
+
+
 const buttons = document.querySelectorAll("button");
 buttons.forEach(button => button.addEventListener("click", () => {
     // displayNumbers(button.textContent);
-    storeValue(button.textContent);
-    displayNumbers(numberOne);
+    // storeValue(button.textContent);
+    // displayNumbers(numberOne);
+
+    if (button.className == "operator") updateOperator(button.textContent);
+    else if (button.className == "number") {
+        storeValue(button.textContent);
+        displayNumbers(numberOne);
+    }
+
 }));
