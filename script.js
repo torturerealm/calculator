@@ -1,6 +1,6 @@
-let numberOne = 3;
-let numberTwo = 2;
-let operator = "+";
+let numberOne = "";
+let numberTwo = "";
+let operator = "";
 let equals = 0;
 
 function add(a, b) {
@@ -38,10 +38,13 @@ function displayNumbers(e) {
     screen.appendChild(text);
 }
 
+function storeValue(e) {
+    numberOne += e; 
+}
 
 const buttons = document.querySelectorAll("button");
 buttons.forEach(button => button.addEventListener("click", () => {
-    // function to store clicked numbers in variable
-    displayNumbers(button.textContent);
-    // function to change display
+    // displayNumbers(button.textContent);
+    storeValue(button.textContent);
+    displayNumbers(numberOne);
 }));
