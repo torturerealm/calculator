@@ -38,8 +38,10 @@ function displayNumbers(e) {
     screen.appendChild(text);
 }
 
-function storeValue(e) {
-    numberOne += e;
+function updateNumberOne(e) {
+    if (e.className == "number") {
+        numberOne += e.textContent;
+    }
 }
 
 function updateNumberTwo(e) {
@@ -65,7 +67,7 @@ buttons.forEach(button => button.addEventListener("click", () => {
     if (operator == "") {
         // update numberOne
         // display numberOne
-        storeValue(button.textContent);
+        updateNumberOne(button);
         displayNumbers(numberOne);
     } else {
         // display operator
