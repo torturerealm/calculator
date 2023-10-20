@@ -43,7 +43,9 @@ function storeValue(e) {
 }
 
 function updateNumberTwo(e) {
-    numberTwo += e.textContent;
+    if (e.className == "number") {
+        numberTwo += e.textContent;
+    }
 }
 
 function updateOperator(e) {
