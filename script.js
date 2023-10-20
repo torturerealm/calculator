@@ -42,6 +42,10 @@ function storeValue(e) {
     numberOne += e;
 }
 
+function updateNumberTwo(e) {
+    numberTwo += e.textContent;
+}
+
 function updateOperator(e) {
     if (e.className == "operator") {
         operator = e.textContent;
@@ -52,6 +56,8 @@ function updateOperator(e) {
 const buttons = document.querySelectorAll("button");
 buttons.forEach(button => button.addEventListener("click", () => {
     
+    // function to clear numberOne, numberTwo
+    // function to operate numberOne and numberTwo
     updateOperator(button);
 
     if (operator == "") {
@@ -64,6 +70,8 @@ buttons.forEach(button => button.addEventListener("click", () => {
         // update numberTwo
         // display numberTwo
         displayNumbers(operator);
+        updateNumberTwo(button);
+        displayNumbers(numberTwo);
     }
 
 }));
