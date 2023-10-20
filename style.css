@@ -15,7 +15,10 @@ body {
 .screen {
     height: 200px;
     width: 300px;
-    background-color: gray;
+    background-color: #CCCCCC;
+    border: 2px solid black;
+    font-size: 1.5rem;
+    padding: 16px;
 }
 
 .num-pad {
