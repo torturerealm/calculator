@@ -20,8 +20,9 @@ function divide(a, b) {
 }
 
 function operate(a, b, operator) {
+        
     if (operator === "+") {
-        equals = add(a, b);
+        add(a, b);
     } else if (operator === "-") {
         subtract(a, b);
     } else if (operator === "*") {
@@ -63,6 +64,9 @@ buttons.forEach(button => button.addEventListener("click", () => {
     // function to clear numberOne, numberTwo
     // function to operate numberOne and numberTwo
     updateOperator(button);
+    if (button.className == "equals") {
+        operate(numberOne, numberTwo, operator);
+    }
 
     if (operator == "") {
         // update numberOne
