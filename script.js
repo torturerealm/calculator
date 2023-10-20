@@ -54,7 +54,7 @@ buttons.forEach(button => button.addEventListener("click", () => {
     // displayNumbers(numberOne);
 
     if (button.className == "operator") updateOperator(button.textContent);
-    else if (button.className == "number") {
+    else if (operator == "") {
         storeValue(button.textContent);
         displayNumbers(numberOne);
     }
