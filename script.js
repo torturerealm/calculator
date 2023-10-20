@@ -39,12 +39,12 @@ function displayNumbers(e) {
 }
 
 function storeValue(e) {
-    numberOne += e; 
+    numberOne += e;
 }
 
 function updateOperator(e) {
     if (e.className == "operator") {
-        operator = e;
+        operator = e.textContent;
     }
 }
 
@@ -53,7 +53,7 @@ const buttons = document.querySelectorAll("button");
 buttons.forEach(button => button.addEventListener("click", () => {
     
     updateOperator(button);
-    
+
     if (operator == "") {
         // update numberOne
         // display numberOne
@@ -63,6 +63,7 @@ buttons.forEach(button => button.addEventListener("click", () => {
         // display operator
         // update numberTwo
         // display numberTwo
+        displayNumbers(operator);
     }
 
 }));
