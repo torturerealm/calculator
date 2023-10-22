@@ -59,7 +59,7 @@ function updateOperator(e) {
     }
 }
 
-function clearVariables() {
+function clear() {
     numberOne = "";
     numberTwo = "";
     operator = "";
