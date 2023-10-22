@@ -1,7 +1,7 @@
 let numberOne = "";
 let numberTwo = "";
 let operator = "";
-let equals = 0;
+let result = "";
 
 function add(a, b) {
     return a + b;
@@ -69,12 +69,15 @@ function clear() {
 const buttons = document.querySelectorAll("button");
 buttons.forEach(button => button.addEventListener("click", () => {
     
-    // function to clear numberOne, numberTwo
-    // function to operate numberOne and numberTwo
     updateOperator(button);
-    if (button.className == "AC") clearVariables();
+    if (button.className == "clear") {
+        clear();
+        displayNumbers(numberOne, numberTwo, operator);
+        displayResult(result);
+    }
+
     if (button.className == "equals") {
-        let result = operate(numberOne, numberTwo, operator);
+        result = operate(numberOne, numberTwo, operator);
         displayResult(result);
     }
 
