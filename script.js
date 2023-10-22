@@ -36,6 +36,11 @@ function displayNumbers(a, b, operator) {
     display.textContent = `${a} ${operator} ${b}`;
 }
 
+function displayResult(e) {
+    const result = document.querySelector(".result");
+    result.textContent = e;
+}
+
 function updateNumberOne(e) {
     if (e.className == "number") {
         numberOne += e.textContent;
