@@ -59,6 +59,12 @@ function updateOperator(e) {
     }
 }
 
+function clearVariables() {
+    numberOne = "";
+    numberTwo = "";
+    operator = "";
+    result = "";
+} 
 
 const buttons = document.querySelectorAll("button");
 buttons.forEach(button => button.addEventListener("click", () => {
@@ -66,6 +72,7 @@ buttons.forEach(button => button.addEventListener("click", () => {
     // function to clear numberOne, numberTwo
     // function to operate numberOne and numberTwo
     updateOperator(button);
+    if (button.className == "AC") clearVariables();
     if (button.className == "equals") {
         let result = operate(numberOne, numberTwo, operator);
         displayResult(result);
