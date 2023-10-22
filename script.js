@@ -32,10 +32,8 @@ function operate(a, b, operator) {
 }
 
 function displayNumbers(e) {
-    const screen = document.querySelector(".screen");
-    const text = document.createElement("div");
-    text.textContent = e;
-    screen.appendChild(text);
+    const display = document.querySelector(".display");
+    display.textContent = e;
 }
 
 function updateNumberOne(e) {
