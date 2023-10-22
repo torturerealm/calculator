@@ -31,9 +31,9 @@ function operate(a, b, operator) {
     };
 }
 
-function displayNumbers(e) {
+function displayNumbers(a, b, operator) {
     const display = document.querySelector(".display");
-    display.textContent = e;
+    display.textContent = `${a} ${operator} ${b}`;
 }
 
 function updateNumberOne(e) {
@@ -70,14 +70,14 @@ buttons.forEach(button => button.addEventListener("click", () => {
         // update numberOne
         // display numberOne
         updateNumberOne(button);
-        displayNumbers(numberOne);
+        displayNumbers(numberOne, numberTwo, operator);
     } else {
         // display operator
         // update numberTwo
         // display numberTwo
-        displayNumbers(operator);
+        displayNumbers(numberOne, numberTwo, operator);
         updateNumberTwo(button);
-        displayNumbers(numberTwo);
+        displayNumbers(numberOne, numberTwo, operator);
     }
 
 }));
