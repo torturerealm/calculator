@@ -67,8 +67,8 @@ buttons.forEach(button => button.addEventListener("click", () => {
     // function to operate numberOne and numberTwo
     updateOperator(button);
     if (button.className == "equals") {
-        let d = operate(numberOne, numberTwo, operator);
-        console.log(d);
+        let result = operate(numberOne, numberTwo, operator);
+        displayResult(result);
     }
 
     if (operator == "") {
