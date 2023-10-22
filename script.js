@@ -20,6 +20,9 @@ function divide(a, b) {
 }
 
 function operate(a, b, operator) {
+    a = +a;
+    b = +b;
+
     if (operator === "+") {
        return add(a, b);
     } else if (operator === "-") {
