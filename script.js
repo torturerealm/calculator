@@ -88,9 +88,14 @@ buttons.forEach(button => button.addEventListener("click", () => {
         updateNumberOne(button);
         displayNumbers(numberOne, numberTwo, operator);
     } else {
-        displayNumbers(numberOne, numberTwo, operator);
-        updateNumberTwo(button);
-        displayNumbers(numberOne, numberTwo, operator);
+        if (result == "") {
+            displayNumbers(numberOne, numberTwo, operator);
+            updateNumberTwo(button);
+            displayNumbers(numberOne, numberTwo, operator);
+        } else {
+            numberOne = result;
+            displayNumbers(numberOne, numberTwo, operator);
+        }
     }
 
 }));
