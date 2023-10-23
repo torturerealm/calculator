@@ -50,7 +50,13 @@ function displayResult(e) {
 
 function updateNumberOne(e) {
     if (e.className == "number") {
-        numberOne += e.textContent;
+        if (temp == "") {
+            numberOne += e.textContent;
+        } else {
+            numberOne = "";
+            temp = "";
+            numberOne += e.textContent;
+        }
     }
 }
 
@@ -90,7 +96,6 @@ buttons.forEach(button => button.addEventListener("click", () => {
     
     if (result == "") {
         if (operator == "") {
-            clear();
             updateNumberOne(button);
             displayNumbers(numberOne, numberTwo, operator);
         } else {
