@@ -90,6 +90,7 @@ buttons.forEach(button => button.addEventListener("click", () => {
     
     if (result == "") {
         if (operator == "") {
+            clear();
             updateNumberOne(button);
             displayNumbers(numberOne, numberTwo, operator);
         } else {
@@ -101,14 +102,5 @@ buttons.forEach(button => button.addEventListener("click", () => {
         temp = result;
         clear();
         numberOne = temp;
-
-        if (operator == "") {
-            updateNumberOne(button);
-            displayNumbers(numberOne, numberTwo, operator);
-        } else {
-            displayNumbers(numberOne, numberTwo, operator);
-            updateNumberTwo(button);
-            displayNumbers(numberOne, numberTwo, operator);
-        } 
     }
 }));
