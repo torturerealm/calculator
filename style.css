@@ -19,6 +19,9 @@ body {
     border: 2px solid black;
     font-size: 1.5rem;
     padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .num-pad {
