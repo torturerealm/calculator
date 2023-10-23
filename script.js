@@ -21,6 +21,10 @@ function divide(a, b) {
 }
 
 function operate(a, b, operator) {
+    if (a == "" && (operator == "*" || operator == "/")) {
+        return "ERROR";
+    }
+    
     a = +a;
     b = +b;
 
@@ -84,21 +88,6 @@ buttons.forEach(button => button.addEventListener("click", () => {
         result = operate(numberOne, numberTwo, operator);
         displayResult(result);
     }
-
-    // if (operator == "") {
-    //     updateNumberOne(button);
-    //     displayNumbers(numberOne, numberTwo, operator);
-    // } else {
-    //     if (result == "") {
-    //         displayNumbers(numberOne, numberTwo, operator);
-    //         updateNumberTwo(button);
-    //         displayNumbers(numberOne, numberTwo, operator);
-    //     } else {
-    //         displayNumbers(numberOne, numberTwo, operator); 
-    //         clear();
-    //         temp = result;
-    //         numberOne = temp;
-    //     }
     
     if (result == "") {
         if (operator == "") {
