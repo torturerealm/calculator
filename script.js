@@ -2,6 +2,7 @@ let numberOne = "";
 let numberTwo = "";
 let operator = "";
 let result = "";
+let temp = "";
 
 function add(a, b) {
     return a + b;
@@ -84,18 +85,42 @@ buttons.forEach(button => button.addEventListener("click", () => {
         displayResult(result);
     }
 
-    if (operator == "") {
-        updateNumberOne(button);
-        displayNumbers(numberOne, numberTwo, operator);
-    } else {
-        if (result == "") {
+    // if (operator == "") {
+    //     updateNumberOne(button);
+    //     displayNumbers(numberOne, numberTwo, operator);
+    // } else {
+    //     if (result == "") {
+    //         displayNumbers(numberOne, numberTwo, operator);
+    //         updateNumberTwo(button);
+    //         displayNumbers(numberOne, numberTwo, operator);
+    //     } else {
+    //         displayNumbers(numberOne, numberTwo, operator); 
+    //         clear();
+    //         temp = result;
+    //         numberOne = temp;
+    //     }
+    
+    if (result == "") {
+        if (operator == "") {
+            updateNumberOne(button);
+            displayNumbers(numberOne, numberTwo, operator);
+        } else {
             displayNumbers(numberOne, numberTwo, operator);
             updateNumberTwo(button);
             displayNumbers(numberOne, numberTwo, operator);
-        } else {
-            numberOne = result;
-            displayNumbers(numberOne, numberTwo, operator);
         }
-    }
+    } else {
+        temp = result;
+        clear();
+        numberOne = temp;
 
+        if (operator == "") {
+            updateNumberOne(button);
+            displayNumbers(numberOne, numberTwo, operator);
+        } else {
+            displayNumbers(numberOne, numberTwo, operator);
+            updateNumberTwo(button);
+            displayNumbers(numberOne, numberTwo, operator);
+        } 
+    }
 }));
