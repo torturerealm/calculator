@@ -21,10 +21,9 @@ function divide(a, b) {
 }
 
 function operate(a, b, operator) {
-    if (a == "" && (operator == "*" || operator == "/")) {
-        return "ERROR";
-    }
-    
+    if (a == "" && (operator == "*" || operator == "/")) return "ERROR";
+    if (b == "") return a;
+
     a = +a;
     b = +b;
 
